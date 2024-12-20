@@ -9,8 +9,8 @@ export default defineConfig({
         assetsDir: '',
         rollupOptions: {
             input: {
-                main: path.resolve(__dirname, 'scss/main.scss'),
-                script: path.resolve(__dirname, 'js/main.js'),
+                main: path.resolve(__dirname, 'src/scss/main.scss'),
+                script: path.resolve(__dirname, 'src/js/main.js'),
             },
             output: {
                 entryFileNames: '[name].js',
