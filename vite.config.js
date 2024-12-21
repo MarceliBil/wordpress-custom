@@ -2,11 +2,11 @@ import { defineConfig } from 'vite';
 import path from 'path';
 
 export default defineConfig({
-    root: './',
-    base: '/',
+    css: {
+        devSourcemap: true,
+    },
     build: {
         outDir: 'dist',
-        assetsDir: '',
         rollupOptions: {
             input: {
                 main: path.resolve(__dirname, 'src/scss/main.scss'),
