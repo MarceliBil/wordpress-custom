@@ -1,8 +1,19 @@
-@use './_variables' as vars;
+@import './_variables';
+@import "bootstrap/scss/bootstrap";
+
+// partias
+@import '../../partials/header/header';
+
+// sections
+@import '../../sections/hero/hero';
+@import '../../sections/gallery/gallery';
+
+
 
 body {
-    background-color: vars.$primary-color;
+    background-color: $color-primary;
     font-family: Arial, sans-serif;
+    padding-top: 30px;
 
     h1 {
         color: white;
@@ -11,5 +22,12 @@ body {
 
 img {
     display: block;
-    max-width: 100%;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+
+}
+
+a {
+    text-decoration: none;
 }

@@ -1,0 +1,24 @@
+@import '../../src/scss/variables';
+
+.nav {
+    background-color: $color-white;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        gap: 30px;
+        margin: 0;
+
+        a {
+            color: $color-black;
+        }
+    }
+}
