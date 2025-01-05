@@ -28,3 +28,23 @@ function enqueue_custom_assets()
     }
 }
 add_action('wp_head', 'enqueue_custom_assets');
+
+// custom client page
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title' => 'Client settings',
+        'menu_title' => 'Client settings',
+        'menu_slug' => 'client-settings',
+        'capability' => 'edit_posts',
+        'redirect' => false
+    ));
+}
+
+
+// add svg
+function allow_svg_upload($mime_types)
+{
+    $mime_types['svg'] = 'image/svg+xml';
+    return $mime_types;
+}
+add_filter('upload_mimes', 'allow_svg_upload');

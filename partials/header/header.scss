@@ -1,24 +1,55 @@
 @import '../../src/scss/variables';
 
-.nav {
-    background-color: $color-white;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header {
     position: absolute;
-    top: 0;
+    top: 30px;
     left: 0;
     width: 100%;
 
-    ul {
-        display: flex;
-        list-style-type: none;
-        gap: 30px;
-        margin: 0;
+    .logo {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
 
-        a {
-            color: $color-black;
+        img {
+            width: 30px;
+        }
+    }
+
+    .nav {
+        background-color: $color-white;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            gap: 30px;
+            margin: 0;
+
+            a {
+                color: $color-black;
+            }
+        }
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        position: absolute;
+
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .social-icon {
+            width: 20px;
         }
     }
 }
